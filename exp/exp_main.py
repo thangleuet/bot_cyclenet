@@ -103,7 +103,7 @@ class Exp_Main(Exp_Basic):
 
                 loss = criterion(outputs, batch_y)
 
-                total_loss.append(loss)
+                total_loss.append(loss.item())
 
                 outputs = outputs.detach().cpu().numpy()
                 batch_y = batch_y.detach().cpu().numpy()
